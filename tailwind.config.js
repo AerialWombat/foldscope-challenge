@@ -2,6 +2,7 @@ const { colors: defaultColors } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   purge: {
+    enabled: false,
     content: ['./src/**/*.jsx', './public/index.html'],
     options: {
       safelist: ['bg-blue', 'bg-dark-orange', 'bg-light-orange', 'text-white', 'bg-white'],
