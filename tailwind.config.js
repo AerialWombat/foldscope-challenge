@@ -4,7 +4,7 @@ module.exports = {
   purge: {
     content: ['./src/**/*.jsx', './public/index.html'],
     options: {
-      safelist: ['blue', 'dark-orange', 'light-orange', 'white'],
+      safelist: ['bg-blue', 'bg-dark-orange', 'bg-light-orange', 'text-white', 'bg-white'],
     },
   },
   darkMode: false, // or 'media' or 'class'
