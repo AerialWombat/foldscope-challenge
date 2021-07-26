@@ -15,7 +15,9 @@ function App() {
     const newCharacterOrder = [];
 
     for (let char of inputString) {
+      // Handle potential uppercase/lowercase differences
       char = char.toUpperCase();
+
       // Increment a character count
       if (newCharacterCounts.hasOwnProperty(char)) {
         newCharacterCounts[char].count++;
@@ -34,7 +36,7 @@ function App() {
       }
     }
 
-    // FIND TOP FIVE
+    // Sort characters by their count and select the top five to be highlighted
     Object.entries(newCharacterCounts)
       .sort((char1, char2) => char1[1].count < char2[1].count)
       .slice(0, 5)
@@ -58,7 +60,7 @@ function App() {
           onChange={(event) => handleTextInput(event)}
         ></textarea>
         <button
-          className="bg-blue hover:bg-blue-400 text-white font-bold py-2 px-4 rounded my-4"
+          className="bg-blue  text-white font-bold py-2 px-4 rounded my-4 transform hover:scale-110 transition"
           onClick={() => handleCharacterCount()}
         >
           Count
