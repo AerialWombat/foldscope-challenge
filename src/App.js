@@ -39,7 +39,7 @@ function App() {
 
     // Sort characters by their count and marks the top five to be highlighted
     Object.entries(newCharacterCounts)
-      .sort((char1, char2) => char1[1].count < char2[1].count)
+      .sort((char1, char2) => char2[1].count - char1[1].count)
       .slice(0, 5)
       .forEach((char) => {
         newCharacterCounts[char[0]].isHighlighted = true;
