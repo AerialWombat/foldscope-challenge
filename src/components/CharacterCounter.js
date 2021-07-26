@@ -6,7 +6,7 @@ function CharacterCounter({ characterData }) {
     <div
       className={`${
         isHighlighted ? 'bg-light-orange' : 'bg-dark-orange'
-      } flex flex-col justify-center items-center w-1/12 px-8 py-8 mx-4 my-2 text-center rounded shadow-xl transform transition hover:scale-110`}
+      } flex flex-col justify-center items-center w-1/12 px-8 py-4 mx-4 my-2 text-center rounded shadow-xl transform transition hover:scale-110`}
     >
       <p className="text-xl font-bold ">{character}</p>
       <p>{count}</p>
